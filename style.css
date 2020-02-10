@@ -1,0 +1,85 @@
+html, body {
+    width: auto;
+    margin: auto;
+    height: 100%;
+    background: #282d38;
+    padding: 0px;
+}
+
+
+#header {
+    display: block;
+    width: 100%;
+    height: 50%;
+    background: gray;
+    border-style: solid;
+    border-width: 1px;
+    background-image: url("img/header.jpg");
+
+    animation-name: dropdown;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+#header_button {
+    position: relative;
+    top: 90%;
+    left: 40%;
+    animation-name: apear;
+    animation-duration: 4s;
+}
+
+@keyframes dropdown{
+    
+    0% {
+        height:0%;
+        opacity: 0%;
+    }
+
+    100% {
+        height:50%;
+        opacity: 100%;
+    }
+
+}
+
+@keyframes apear {
+
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    top: 5px;
+    right:0%;
+   
+}
+
+li {
+    float:left;
+
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
