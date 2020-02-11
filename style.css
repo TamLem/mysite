@@ -1,47 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
 html, body {
-    width: auto;
-    margin: auto;
-    height: 100%;
-    background: #282d38;
-    padding: 0px;
+    width: 100%;
+    height: 240vh;
+    min-height: 100vh;
+    
 }
 
 
-#header {
-    display: block;
-    width: 100%;
-    height: 50%;
-    background: gray;
-    border-style: solid;
-    border-width: 1px;
-    background-image: url("img/header.jpg");
+#wrapper {
+    width: 1200px;
+    height: 1000px;
+    margin: 70px auto;
+    background: white;
+    display: grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px;
+}
 
-    animation-name: dropdown;
-    animation-duration: 2s;
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    /* order-style: solid;
+    border-width: 2px; */
+    
+    background-color: hsl(0, 0%, 20%);
+    z-index: 9999;
+    
+}
+
+ul {
+    
+    list-style-type: none;
+}
+
+li {
+    
+    float:right;
+    text-align: center;
+
+}
+
+li a {
+   
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    padding-right: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li a:hover {
+    color: hsl(0, 3%, 56%)	
+}
+
+#header {
+    grid-area: header;
+    width: 100%;
+    height: 400px;
+    background: gray;
+    background-image: linear-gradient(hsla(0, 3%, 21%, 0)	, hsl(0, 0%, 1%)	 ), url("img/header.jpg");
+    padding: 0;
+    margin: 0;
+    animation-name: apear;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
+    
 }
 
 #header_button {
-    position: relative;
-    top: 90%;
-    left: 40%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
     animation-name: apear;
     animation-duration: 4s;
 }
 
-@keyframes dropdown{
+header h2 {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: 60%;
+    text-align: center;
     
-    0% {
-        height:0%;
-        opacity: 0%;
-    }
-
-    100% {
-        height:50%;
-        opacity: 100%;
-    }
-
 }
+
 
 @keyframes apear {
 
@@ -59,27 +115,94 @@ html, body {
 
 }
 
-ul {
-    list-style-type: none;
+.main {
+    
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "section1"
+                          "section2"
+                          "section3"
+                          "section4"
+                          "section5";
+
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 20px;
+    background: honeydew;
     width: 100%;
-    overflow: auto;
-    position: relative;
-    top: 5px;
-    right:0%;
-   
-}
-
-li {
-    float:left;
+    height: auto;
+    align-items: top;
+    padding: 0px;
+    
+    
+    
 
 }
 
-li a {
+.section {
+    
+    border-bottom-style: solid;
+    border-width: 2px ;
+    border-color: gray;
+    width: auto;
+    height: 300px;
+    padding: 5rem;
+    padding-bottom: 0rem;
+
+}
+#section1 {
+    grid-area: section1;
+    
+    
+    
+}
+
+#section2 {
+    grid-area: section2;
+}
+
+#section3 {
+    grid-area: section3;
+}
+
+#section4 {
+    grid-area: section4;
+}
+
+
+#section5 {
+    grid-area: section5;
+}
+
+.subsection1 {
+    width: 50%;
+    float: left;
+    padding: 0;
+}
+
+.subsection2 {
+    width: 50%;
+    
+    float: right;
+}
+
+
+#footer {
+    /* grid-area: footer; */
+    width: 100%;
+    height: 200px;
+    background-color: hsl(0, 0%, 20%);
     display: block;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    padding-right: 20px;
-    font-size: 25px;
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    bottom: -220vh;
+       
+}
+
+footer p {
+   margin: auto;
+   padding: 100px;
+   color: blanchedalmond;
+
+   text-decoration: none;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
